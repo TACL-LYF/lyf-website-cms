@@ -13,7 +13,7 @@ export default {
             name: "boardYear",
             title: "Board Year",
             type: "reference",
-            to: [{ type: "boardYear" }],
+            to: [{ type: "campYear" }],
             validation: (Rule) => Rule.required(),
         },
         {

@@ -9,18 +9,14 @@ export default {
             name: 'year',
             title: 'Camp Year',
             type: 'number',
-            validation: (Rule) =>
-                Rule.required()
-                    .regex(/\d{4}-\d{4}/, {
-                        name: "board year"
-                    })
-                    .error("Years should be in the format XXXX-XXXX"),
+            validation: (Rule) => Rule.required(),
         },
         {
             name: 'boardYear',
             title: 'Board Year',
             type: 'string',
             inputComponent: ComputedField,
+            // See https://github.com/wildseansy/sanity-plugin-computed-field for explanation of how this works.
             options: {
                 editable: false,
                 buttonText: "Generate Board Year",
@@ -30,7 +26,8 @@ export default {
                 reduceQueryResult: (queryResult: {
                     year: number
                 }) => `${queryResult.year - 1}-${queryResult.year}`
-            }
+            },
+            validation: (Rule) => Rule.required(),
         }
     ],
 }
