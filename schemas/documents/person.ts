@@ -20,27 +20,29 @@ export default {
             name: "level",
             title: "Level",
             type: "number",
-            list: [
-                {value: 0, title: "Executive"},
-                {value: 1, title: "Director"},
-                {value: 2, title: "Committee Member"},
-                {value: 3, title: "Program Director"},
-                {value: 4, title: "Counselor"},
-                {value: 5, title: "Synthesis"},
-            ],
-            validation: (Rule) => Rule.required(),
+            options: {
+                list: [
+                    {value: 0, title: "Executive"},
+                    {value: 1, title: "Director"},
+                    {value: 2, title: "Committee Member"},
+                    {value: 3, title: "Program Director"},
+                    {value: 4, title: "Counselor"},
+                    {value: 5, title: "Synthesis"},
+                ],
+            },
+            validation: (Rule) => Rule.required() && Rule.greaterThan(0) && Rule.lessThan(5),
         },
         {
             name: "position",
             title: "Position",
             type: "string",
-            hidden: ({ parent }) => parent.level <= 2
+            hidden: ({ parent }) => parent.level != 0
         },
         {
             name: "committee",
             title: "Committee",
             type: "string",
-            hidden: ({ parent }) => parent.level <= 2
+            hidden: ({ parent }) => parent.level != 1 && parent.level != 2
         },
         {
             name: "propic",
