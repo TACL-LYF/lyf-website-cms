@@ -9231,6 +9231,15 @@ sanity-diff-patch@^1.0.9:
   dependencies:
     diff-match-patch "^1.0.5"
 
+sanity-plugin-computed-field@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/sanity-plugin-computed-field/-/sanity-plugin-computed-field-1.0.2.tgz#77841699935fb1d959edb6b5c8f79198c4a90806"
+  integrity sha512-GlCnJHjt15i6Y3JCmW2b3ZrpeBvx6rsBXLWbN3Dn76OIa6Nv3/gZ+qCcMxR3Dy64q6V1dhqaeE5ip8yretWGIA==
+  dependencies:
+    "@sanity/base" ">= 2.5.0"
+    "@sanity/ui" ">= 0.33.9"
+    "@sanity/util" ">= 2.5.0"
+
 sanity-plugin-prefixed-slug@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sanity-plugin-prefixed-slug/-/sanity-plugin-prefixed-slug-1.0.1.tgz#3c1cab9cf507912633e8fc3e9a33f5430edba06d"
