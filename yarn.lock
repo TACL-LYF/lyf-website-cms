@@ -9240,16 +9240,6 @@ sanity-plugin-computed-field@^1.0.2:
     "@sanity/ui" ">= 0.33.9"
     "@sanity/util" ">= 2.5.0"
 
-sanity-plugin-prefixed-slug@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/sanity-plugin-prefixed-slug/-/sanity-plugin-prefixed-slug-1.0.1.tgz#3c1cab9cf507912633e8fc3e9a33f5430edba06d"
-  integrity sha512-u3RdktLyJd5NoIaPd1IBqfH33a/W+s8WvpuQ4QlQQo5MHxnQTwBkeA2tM+PadWG0idAeq08BqqbaZrhIuTk0Fg==
-  dependencies:
-    "@sanity/base" ">= 2.5.0"
-    "@sanity/ui" ">= 0.33.9"
-    "@sanity/util" ">= 2.5.0"
-    speakingurl "^14.0.1"
-
 sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.npmjs.org/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
@@ -9598,11 +9588,6 @@ speakingurl@^13.0.0:
   version "13.0.0"
   resolved "https://registry.npmjs.org/speakingurl/-/speakingurl-13.0.0.tgz#266c52d2b47585375af058e4783c8d1097a2d3db"
   integrity sha512-bjwu8erR5rsfHW9ZKHReHJt9CEPrJCZopJ3rMVcCh8buJom+BI/7bHWYiHSZd+yS9rx4DGN+r5oKoVqDkiqfWw==
-
-speakingurl@^14.0.1:
-  version "14.0.1"
-  resolved "https://registry.yarnpkg.com/speakingurl/-/speakingurl-14.0.1.tgz#f37ec8ddc4ab98e9600c1c9ec324a8c48d772a53"
-  integrity sha512-1POYv7uv2gXoyGFpBCmpDVSNV74IfsWlDW216UPjbWufNf+bSU6GdbDsxdcxtfwb4xlI3yxzOTKClUosxARYrQ==
 
 speedometer@~1.0.0:
   version "1.0.0"
