@@ -3,8 +3,22 @@
 The [LYF Website](https://github.com/SLoh4137/lyf-website) uses [Sanity.io](https://www.sanity.io/) to store content.
 
 # Getting Started
-1. Download the repo to your computer: `git clone git@github.com:SLoh4137/lyf-website-cms.git`
+1. Download the repo to your computer: `git clone git@github.com:TACL-LYF/lyf-website-cms.git`
+2. Run `yarn install` in order to download all the required packages
+   - See [installing yarn](https://classic.yarnpkg.com/lang/en/docs/install) if you don't yet have yarn on your computer
 2. In `lyf-website-cms`, you can run `sanity start` to see a locally running version of Sanity Studio
 3. Use `sanity deploy` to publish your changes.
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
+Sanity has a more [comprehensive getting started guide](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme) if you want to learn more!
+
+# Basic Structure
+
+Sanity is built around schemas that define the kinds of content we support. Once we define a schema, we agree on what fields we can add and what fields will exist when we pull that content from the server. We define *schemas* for *documents* that store content. We can even define some fields to be re-used in multiple *documents* by creating *objects*.
+
+- [config/](/config/): Stores the configuration files for Sanity. Not super necessary for us to manage
+- [plugins/](/plugins/): Managed by Sanity. We can download additional plugins via [Sanity's plugin system](https://www.sanity.io/plugins)
+- [schemas/](/schemas/): The all-important folder that stores all of our supported schemas!
+- [static/](/static/): Sanity hosts a site for us to add content, and if we want assets in a known file path (for example: favicons) we can store them here
+- [deskStructure.ts](deskStructure.ts): Sanity lets us [define how we want to disply and organize documents](https://www.sanity.io/docs/structure-builder-introduction). This file defines what we want that structure to look like
+- [package.json](package.json): Found in all npm packages. Defines a bunch of properties of the package including what other packages we depend on.
+- [sanity.json](sanity.json): Sanity's configuration file
