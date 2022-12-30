@@ -1,7 +1,7 @@
 // Created following https://youtu.be/YMX2TX3vIAc
-import S from "@sanity/desk-tool/structure-builder"
+import { StructureBuilder } from "sanity/desk"
 
-export default () =>
+export default (S: StructureBuilder) =>
     S.list()
         .title("Content")
         .items([
@@ -37,10 +37,6 @@ export default () =>
                 ),
             // The rest of the documents
             ...S.documentTypeListItems().filter(
-                (item) =>
-                    ![
-                        "siteSettings",
-                        "campYear",
-                    ].includes(item.getId())
+                (item) => !["siteSettings", "campYear"].includes(item.getId())
             ),
         ])
