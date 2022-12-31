@@ -1,5 +1,6 @@
 // Import the singleton schemas
 import siteSettings from './singletons/siteSettings'
+import homePage from "./singletons/homePage"
 
 // Import the document schemas
 import campYear from './documents/campYear'
@@ -12,6 +13,7 @@ import portableText from "./objects/portableText"
 export default [
   // Singletons
   siteSettings,
+  homePage,
 
   // Documents
   campYear,
