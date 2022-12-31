@@ -1,11 +1,12 @@
 // Created following https://youtu.be/YMX2TX3vIAc
 import { StructureBuilder } from "sanity/desk"
+import { Home, Settings } from "@mui/icons-material"
 
 export default (S: StructureBuilder) =>
     S.list()
         .title("Content")
         .items([
-            S.listItem().title("Site Settings").child(
+            S.listItem().title("Site Settings").icon(Settings).child(
                 // Display the editor
                 S.editor()
                     .id("siteSettings")
@@ -13,6 +14,24 @@ export default (S: StructureBuilder) =>
                     // Create a document with the ID siteSettings
                     .documentId("siteSettings")
             ),
+            S.divider(),
+            S.listItem()
+                .title("Site Pages")
+                .child(
+                    S.list()
+                        .title("Site Pages")
+                        .items([
+                            S.listItem()
+                                .title("Home Page")
+                                .icon(Home)
+                                .child(
+                                    S.editor()
+                                        .id("homePage")
+                                        .schemaType("homePage")
+                                        .documentId("homePage")
+                                ),
+                        ])
+                ),
             S.divider(),
             S.listItem()
                 .title("Camp Years")
@@ -37,6 +56,9 @@ export default (S: StructureBuilder) =>
                 ),
             // The rest of the documents
             ...S.documentTypeListItems().filter(
-                (item) => !["siteSettings", "campYear"].includes(item.getId())
+                (item) =>
+                    !["siteSettings", "campYear", "homePage"].includes(
+                        item.getId()
+                    )
             ),
         ])
