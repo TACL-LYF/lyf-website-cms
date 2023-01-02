@@ -1,4 +1,6 @@
-export default {
+import { DocumentDefinition } from "sanity"
+
+const schema: DocumentDefinition =  {
     name: "siteSettings",
     title: "Site Settings",
     type: "document",
@@ -19,3 +21,5 @@ export default {
         },
     ],
 }
+
+export default schema
