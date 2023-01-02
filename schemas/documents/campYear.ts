@@ -1,6 +1,7 @@
+import { DocumentDefinition } from "sanity"
 // import ComputedField from "sanity-plugin-computed-field"
 
-export default {
+const schema: DocumentDefinition =  {
     name: "campYear",
     title: "Camp Year",
     type: "document",
@@ -28,7 +29,9 @@ export default {
             //         year: number
             //     }) => `${queryResult.year - 1}-${queryResult.year}`
             // },
-            validation: (Rule) => Rule.required(),
+            validation: (Rule) => Rule.required() && Rule.regex(/\d{4}-\d{4}/),
         },
     ],
 }
+
+export default schema
