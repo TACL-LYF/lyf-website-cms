@@ -15,6 +15,11 @@ export default {
             type: "text",
         },
         {
+            name: "subHeaderButton",
+            title: "Sub Header Button",
+            type: "button",
+        },
+        {
             name: "headerPhotos",
             title: "Header Photos",
             description:
@@ -65,6 +70,21 @@ export default {
                     type: "statistic",
                 }
             ]
+        },
+        {
+            name: "ctaHeader",
+            title: "CTA Section Header",
+            type: "text",
+        },
+        {
+            name: "ctaBody",
+            title: "CTA Section Body",
+            type: "portableText",
+        },
+        {
+            name: "ctaLink",
+            title: "CTA Section Button",
+            type: "button",
         }
     ],
 }
