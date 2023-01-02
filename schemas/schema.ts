@@ -8,6 +8,7 @@ import person from './documents/person'
 
 // Import the object schemas
 import portableText from "./objects/portableText"
+import statistic from "./objects/statistic"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default [
@@ -20,5 +21,6 @@ export default [
   person,
 
   // Objects
-  portableText
+  portableText,
+  statistic
 ]
