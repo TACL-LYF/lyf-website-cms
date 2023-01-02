@@ -1,4 +1,6 @@
-export default {
+import { DocumentDefinition } from "sanity"
+
+const schema: DocumentDefinition = {
     name: "homePage",
     title: "Home Page",
     type: "document",
@@ -25,6 +27,9 @@ export default {
             description:
                 "The set of photos to display in the header. Be sure to add alt text in the separate media browser! We currently assume there are 6 photos total.",
             type: "array",
+            options: {
+                length: 6,
+            },
             of: [
                 {
                     type: "image",
@@ -54,7 +59,9 @@ export default {
             name: "goals",
             title: "Goals of LYF Camp",
             type: "array",
-            length: 4,
+            options: {
+                length: 4,
+            },
             of: [
                 {
                     type: "string",
@@ -88,3 +95,5 @@ export default {
         }
     ],
 }
+
+export default schema
