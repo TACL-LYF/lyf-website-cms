@@ -1,12 +1,13 @@
 // Created following https://youtu.be/YMX2TX3vIAc
 import { StructureBuilder } from "sanity/desk"
-import { Home, Settings } from "@mui/icons-material"
+import { HomeIcon, CogIcon } from "@sanity/icons"
+// Find more icons at https://icons.sanity.build/
 
 export default (S: StructureBuilder) =>
     S.list()
         .title("Content")
         .items([
-            S.listItem().title("Site Settings").icon(Settings).child(
+            S.listItem().title("Site Settings").icon(CogIcon).child(
                 // Display the editor
                 S.editor()
                     .id("siteSettings")
@@ -23,7 +24,7 @@ export default (S: StructureBuilder) =>
                         .items([
                             S.listItem()
                                 .title("Home Page")
-                                .icon(Home)
+                                .icon(HomeIcon)
                                 .child(
                                     S.editor()
                                         .id("homePage")
