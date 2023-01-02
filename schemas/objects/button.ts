@@ -1,5 +1,6 @@
 import { ObjectDefinition } from "sanity"
 
+// Be sure to update gatsby-node in the website repo with the right typing.
 const schema: ObjectDefinition = {
     name: "button",
     type: "object",
@@ -15,6 +16,7 @@ const schema: ObjectDefinition = {
             name: "link",
             title: "Link",
             type: "string",
+            validation: (Rule) => Rule.required(),
         },
         {
             name: "variant",
@@ -24,7 +26,7 @@ const schema: ObjectDefinition = {
             type: "string",
             initialValue: "contained",
             options: {
-                list: ["contained", "outlined", "text", "string"],
+                list: ["contained", "outlined", "text"],
             },
             validation: (Rule) => Rule.required(),
         },
