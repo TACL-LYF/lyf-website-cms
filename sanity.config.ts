@@ -4,7 +4,6 @@ import { media } from "sanity-plugin-media"
 import schemaTypes from "./schemas/schema"
 import deskStructure from "./deskStructure"
 
-
 export default defineConfig({
     name: "lyf-website-cms",
     title: "LYF Website CMS",
