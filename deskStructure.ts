@@ -1,7 +1,33 @@
 // Created following https://youtu.be/YMX2TX3vIAc
 import { StructureBuilder } from "sanity/desk"
-import { HomeIcon, CogIcon } from "@sanity/icons"
+import { HomeIcon, CogIcon, DocumentIcon } from "@sanity/icons"
 // Find more icons at https://icons.sanity.build/
+
+const sitePages = [
+    {
+        section: "About Us",
+        pages: [
+            { title: "Leadership", schema: "leadershipPage" },
+            { title: "Cultural Stance", schema: "culturePage" },
+            { title: "History of LYF", schema: "historyPage" },
+        ],
+    },
+    {
+        section: "Camp",
+        pages: [
+            { title: "What is LYF Camp?", schema: "lyfCampPage" },
+            { title: "FAQs", schema: "faqPage" },
+        ],
+    },
+    {
+        section: "Get Involved",
+        pages: [
+            { title: "Join Our Team", schema: "joinOurTeamPage" },
+            { title: "Donate", schema: "donatePage" },
+            { title: "Cookbook", schema: "cookbookPage" },
+        ],
+    },
+]
 
 export default (S: StructureBuilder) =>
     S.list()
@@ -31,6 +57,35 @@ export default (S: StructureBuilder) =>
                                         .schemaType("homePage")
                                         .documentId("homePage")
                                 ),
+                            // Show the site map as pages to be edited
+                            ...sitePages.map(({ section, pages }) =>
+                                S.listItem()
+                                    .title(section)
+                                    .child(
+                                        S.list()
+                                            .title(section)
+                                            .items(
+                                                // Display an editor for each of the pages
+                                                pages.map(
+                                                    ({ title, schema }) => {
+                                                        return S.listItem()
+                                                            .title(title)
+                                                            .icon(DocumentIcon)
+                                                            .child(
+                                                                S.editor()
+                                                                    .id(schema)
+                                                                    .schemaType(
+                                                                        schema
+                                                                    )
+                                                                    .documentId(
+                                                                        schema
+                                                                    )
+                                                            )
+                                                    }
+                                                )
+                                            )
+                                    )
+                            ),
                         ])
                 ),
             S.divider(),
@@ -58,8 +113,14 @@ export default (S: StructureBuilder) =>
             // The rest of the documents
             ...S.documentTypeListItems().filter(
                 (item) =>
-                    !["siteSettings", "campYear", "homePage"].includes(
-                        item.getId()
-                    )
+                    ![
+                        "siteSettings",
+                        "campYear",
+                        "homePage",
+                        // Filter out all of the schemas for the site pages
+                        ...sitePages.flatMap(({ pages }) =>
+                            pages.map(({ schema }) => schema)
+                        ),
+                    ].includes(item.getId())
             ),
         ])
