@@ -1,6 +1,14 @@
 // Import the singleton schemas
 import siteSettings from './singletons/siteSettings'
 import homePage from "./singletons/homePage"
+import culturePage from "./singletons/about-us/culturePage"
+import historyPage from "./singletons/about-us/historyPage"
+import leadershipPage from "./singletons/about-us/leadershipPage"
+import faqPage from "./singletons/camp/faqPage"
+import lyfCampPage from "./singletons/camp/lyfCampPage"
+import cookbookPage from "./singletons/get-involved/cookbookPage"
+import joinOurTeamPage from "./singletons/get-involved/joinOurTeamPage"
+import donatePage from "./singletons/get-involved/donatePage"
 
 // Import the document schemas
 import campYear from './documents/campYear'
@@ -16,6 +24,17 @@ export default [
   // Singletons
   siteSettings,
   homePage,
+  // about-us
+  culturePage,
+  historyPage,
+  leadershipPage,
+  // camp
+  faqPage,
+  lyfCampPage,
+  // get-involved
+  cookbookPage,
+  joinOurTeamPage,
+  donatePage,
 
   // Documents
   campYear,
