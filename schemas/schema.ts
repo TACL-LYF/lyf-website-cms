@@ -13,11 +13,13 @@ import donatePage from "./singletons/get-involved/donatePage"
 // Import the document schemas
 import campYear from "./documents/campYear"
 import person from "./documents/person"
+import event from "./documents/event"
 
 // Import the object schemas
 import portableText from "./objects/portableText"
 import statistic from "./objects/statistic"
 import button from "./objects/button"
+import card from "./objects/card"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default [
@@ -39,11 +41,14 @@ export default [
     // Documents
     campYear,
     person,
+    event,
 
     // Objects
     portableText,
     statistic,
     button,
+    card,
+    // Objects specific to the FAQ section
     faqSection,
     question,
 ]

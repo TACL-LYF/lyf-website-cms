@@ -1,4 +1,4 @@
-import { DocumentDefinition } from "sanity"
+import { DocumentDefinition, ObjectDefinition } from "sanity"
 
 const schema: DocumentDefinition = {
     name: "lyfCampPage",
@@ -28,7 +28,42 @@ const schema: DocumentDefinition = {
                 },
             ],
         },
-
+        {
+            name: "eventsToDisplay",
+            title: "Upcoming Events",
+            description:
+                "Select references to events to display on the camp page.",
+            type: "array",
+            of: [
+                {
+                    type: "reference",
+                    to: [{ type: "event" }],
+                },
+            ],
+        },
+        {
+            name: "activities",
+            title: "Activities",
+            description:
+                "Activities shown in the workshops and sing-along section",
+            type: "array",
+            of: [
+                {
+                    type: "card",
+                },
+            ],
+        },
+        {
+            name: "community",
+            title: "Community",
+            description: "Aspects of community at LYF",
+            type: "array",
+            of: [
+                {
+                    type: "card",
+                },
+            ],
+        },
     ],
 }
 
