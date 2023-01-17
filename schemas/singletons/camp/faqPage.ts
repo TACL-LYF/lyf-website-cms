@@ -1,5 +1,23 @@
 import { DocumentDefinition, ObjectDefinition } from "sanity"
 
+const question: ObjectDefinition = {
+    name: "question",
+    title: "Question",
+    type: "object",
+    fields: [
+        {
+            name: "questionTitle",
+            title: "Question Title",
+            type: "string",
+        },
+        {
+            name: "questionAnswer",
+            title: "Question Answer",
+            type: "portableText",
+        },
+    ],
+}
+
 const faqSection: ObjectDefinition = {
     name: "faqSection",
     title: "FAQ Section",
@@ -17,21 +35,7 @@ const faqSection: ObjectDefinition = {
             type: "array",
             of: [
                 {
-                    name: "question",
-                    title: "Question",
-                    type: "object",
-                    fields: [
-                        {
-                            name: "questionTitle",
-                            title: "Question Title",
-                            type: "string",
-                        },
-                        {
-                            name: "questionAnswer",
-                            title: "Question Answer",
-                            type: "portableText",
-                        },
-                    ],
+                    type: "question",
                 },
             ],
         },
@@ -57,6 +61,7 @@ const schema: DocumentDefinition = {
         {
             name: "sections",
             title: "Sections",
+            description: "Each section is composed of header and multiple questions",
             type: "array",
             of: [
                 {
@@ -68,4 +73,4 @@ const schema: DocumentDefinition = {
 }
 
 export default schema
-export { faqSection }
+export { faqSection, question }
