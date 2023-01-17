@@ -4,7 +4,7 @@ import homePage from "./singletons/homePage"
 import culturePage from "./singletons/about-us/culturePage"
 import historyPage from "./singletons/about-us/historyPage"
 import leadershipPage from "./singletons/about-us/leadershipPage"
-import faqPage, { faqSection } from "./singletons/camp/faqPage"
+import faqPage, { faqSection, question } from "./singletons/camp/faqPage"
 import lyfCampPage from "./singletons/camp/lyfCampPage"
 import cookbookPage from "./singletons/get-involved/cookbookPage"
 import joinOurTeamPage from "./singletons/get-involved/joinOurTeamPage"
@@ -45,4 +45,5 @@ export default [
     statistic,
     button,
     faqSection,
+    question,
 ]
