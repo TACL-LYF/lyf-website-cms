@@ -1,4 +1,5 @@
 import { ArrayDefinition } from "sanity"
+import { LinkIcon } from "@sanity/icons"
 
 const schema: ArrayDefinition = {
     name: "portableText",
@@ -41,6 +42,7 @@ const schema: ArrayDefinition = {
                         name: "externalLink",
                         type: "object",
                         title: "External Link",
+                        icon: LinkIcon,
                         fields: [
                             {
                                 name: "href",
