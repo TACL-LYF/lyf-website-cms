@@ -16,6 +16,70 @@ const schema: DocumentDefinition = {
             title: "Sub Header",
             type: "text",
         },
+        {
+            name: "headerImage",
+            title: "Header Image",
+            description:
+                "Image accompanying 'Join Our Team' section",
+            type: "image"
+        },
+        {
+            name: "headerButton",
+            title: "Header button",
+            description:
+                "Button to 'Apply Now'",
+            type: "button"
+        },
+        {
+            name: "volunteerImpact",
+            title: "Volunteer Impact",
+            description:
+                "Cards shown in the 'Why do we volunteer' section",
+            type: "array",
+            of: [
+                {
+                    type: "card",
+                },
+            ],
+        },
+        {
+            name: "getInvolved",
+            title: "Get Involved",
+            description:
+                "Cards shown in the 'How can you get involved' section",
+            type: "array",
+            of: [
+                {
+                    type: "card",
+                },
+            ],
+        },
+        {
+            name: "interestForm",
+            title: "Interest Form",
+            description:
+                "Text attached to interest form submission",
+            type: "text",
+        },
+        {
+            name: "interestFormButton",
+            title: "Interest Form Button",
+            description:
+                "Button to submit interest form",
+            type: "button",
+        },
+        {
+            name: "upNext",
+            title: "Up Next",
+            description:
+                "Cards shown in the 'Up Next' section",
+            type: "array",
+            of: [
+                {
+                    type: "card"
+                },
+            ],
+        },
     ],
 }
 
