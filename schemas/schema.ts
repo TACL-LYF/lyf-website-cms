@@ -20,6 +20,7 @@ import portableText from "./objects/portableText"
 import statistic from "./objects/statistic"
 import button from "./objects/button"
 import card from "./objects/card"
+import quote from "./objects/quote"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default [
@@ -48,6 +49,7 @@ export default [
     statistic,
     button,
     card,
+    quote,
     // Objects specific to the FAQ section
     faqSection,
     question,
