@@ -25,6 +25,7 @@ const sitePages = [
             { title: "Join Our Team", schema: "joinOurTeamPage" },
             { title: "Donate", schema: "donatePage" },
             { title: "Cookbook", schema: "cookbookPage" },
+            { title: "Get Involved", schema: "getInvolvedPage" },
         ],
     },
 ]
