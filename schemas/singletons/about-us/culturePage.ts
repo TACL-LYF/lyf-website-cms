@@ -14,7 +14,42 @@ const schema: DocumentDefinition = {
         {
             name: "subHeader",
             title: "Sub Header",
-            type: "text",
+            type: "portableText",
+        },
+        {
+            name: "blurb",
+            title: "Blurb",
+            type: "titleBody",
+        },
+        {
+            name: "pillars",
+            title: "Pillars",
+            type: "array",
+            of: [
+                {
+                    type: "titleBody"
+                }
+            ]
+        },
+        {
+            name: "cultureIs",
+            title: "Culture Is",
+            type: "array",
+            of: [
+                {
+                    type: "titleBody",
+                },
+            ]
+        },
+        {
+            name: "actuation",
+            title: "Actuation",
+            type: "array",
+            of: [
+                {
+                    type: "card",
+                },
+            ]
         },
     ],
 }
