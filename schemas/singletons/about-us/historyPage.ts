@@ -16,6 +16,23 @@ const schema: DocumentDefinition = {
             title: "Sub Header",
             type: "text",
         },
+        {
+            name: "headerImage",
+            title: "Header Image",
+            description: "Image accompanying 'History' section",
+            type: "image"
+        },
+        {
+            name: "timeline",
+            title: "Timeline",
+            description: "Text and images to display on the history timeline. Title will be used as the date.",
+            type: "array",
+            of: [
+                {
+                    type: "card",
+                },
+            ],
+        }
     ],
 }
 
