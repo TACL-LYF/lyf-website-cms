@@ -79,6 +79,11 @@ const schema: DocumentDefinition = {
             ]
         },
         {
+            name: "campVideoLink",
+            title: "Camp Video Link",
+            type: "url"
+        },
+        {
             name: "ctaHeader",
             title: "CTA Section Header",
             type: "text",
