@@ -1,0 +1,12 @@
+name: Deploy Schema
+run-name: ${{ github.actor } deployed schema
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - run: yarn run deploy
