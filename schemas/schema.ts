@@ -17,11 +17,12 @@ import person from "./documents/person"
 import event from "./documents/event"
 
 // Import the object schemas
-import portableText from "./objects/portableText"
-import statistic from "./objects/statistic"
 import button from "./objects/button"
 import card from "./objects/card"
+import dropdown from "./objects/dropdown"
+import portableText from "./objects/portableText"
 import quote from "./objects/quote"
+import statistic from "./objects/statistic"
 import titleBody from "./objects/titleBody"
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -48,12 +49,14 @@ export default [
     event,
 
     // Objects
-    portableText,
-    statistic,
     button,
     card,
-    titleBody,
+    dropdown,
+    portableText,
     quote,
+    statistic,
+    titleBody,
+
     // Objects specific to the FAQ section
     faqSection,
     question,
