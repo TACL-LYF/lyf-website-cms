@@ -14,6 +14,7 @@ import getInvolvedPage from "./singletons/get-involved/getInvolvedPage"
 // Import the document schemas
 import campYear from "./documents/campYear"
 import person from "./documents/person"
+import product from "./documents/product"
 import event from "./documents/event"
 
 // Import the object schemas
@@ -46,6 +47,7 @@ export default [
     // Documents
     campYear,
     person,
+    product,
     event,
 
     // Objects
