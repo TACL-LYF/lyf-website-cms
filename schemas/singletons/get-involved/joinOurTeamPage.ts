@@ -31,6 +31,16 @@ const schema: DocumentDefinition = {
             type: "button"
         },
         {
+            name: "volunteerHeader",
+            title: "Volunteer Section Header",
+            type: "string",
+        },
+        {
+            name: "volunteerBody",
+            title: "Volunteer Section Body",
+            type: "portableText",
+        },
+        {
             name: "volunteerImpact",
             title: "Volunteer Impact",
             description:
@@ -41,6 +51,16 @@ const schema: DocumentDefinition = {
                     type: "card",
                 },
             ],
+        },
+        {
+            name: "getInvolvedHeader",
+            title: "Get Involved Section Header",
+            type: "string",
+        },
+        {
+            name: "getInvolvedBody",
+            title: "Get Involved Section Body",
+            type: "portableText",
         },
         {
             name: "getInvolved",
