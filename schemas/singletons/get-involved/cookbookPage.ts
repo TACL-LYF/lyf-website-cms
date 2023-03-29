@@ -6,15 +6,13 @@ const schema: DocumentDefinition = {
     type: "document",
     fields: [
         {
-            name: "mainHeader",
-            title: "Main Header",
-            type: "string",
+            name: "productReference",
+            title: "Cookbook Document to Display",
+            description:
+                "A reference to the main cookbook version we should display on the cookbook page. Every product will still exist in our database, and we can choose to highlight different cookbooks.",
+            type: "reference",
+            to: [{ type: "product" }],
             validation: (Rule) => Rule.required(),
-        },
-        {
-            name: "subHeader",
-            title: "Sub Header",
-            type: "text",
         },
     ],
 }
