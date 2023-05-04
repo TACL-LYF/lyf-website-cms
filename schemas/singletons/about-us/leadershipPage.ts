@@ -16,6 +16,13 @@ const schema: DocumentDefinition = {
             title: "Sub Header",
             type: "text",
         },
+        {
+            name: "leadership",
+            title: "Leadership Team",
+            type: "reference",
+            to: [{ type: "leadership" }],
+            validation: (Rule) => Rule.required(),
+        },
     ],
 }
 
