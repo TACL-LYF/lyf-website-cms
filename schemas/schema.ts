@@ -13,14 +13,16 @@ import getInvolvedPage from "./singletons/get-involved/getInvolvedPage"
 
 // Import the document schemas
 import campYear from "./documents/campYear"
-import person from "./documents/person"
+import leadership from "./documents/leadership"
 import product from "./documents/product"
 import event from "./documents/event"
 
 // Import the object schemas
 import button from "./objects/button"
 import card from "./objects/card"
+import committee from "./objects/committee"
 import dropdown from "./objects/dropdown"
+import person from "./objects/person"
 import portableText from "./objects/portableText"
 import quote from "./objects/quote"
 import statistic from "./objects/statistic"
@@ -46,14 +48,16 @@ export default [
 
     // Documents
     campYear,
-    person,
-    product,
     event,
+    leadership,
+    product,
 
     // Objects
     button,
     card,
+    committee,
     dropdown,
+    person,
     portableText,
     quote,
     statistic,
