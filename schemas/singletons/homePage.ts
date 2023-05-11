@@ -56,6 +56,11 @@ const schema: DocumentDefinition = {
             type: "portableText",
         },
         {
+            name: "campVideo",
+            title: "Camp Video YouTube URL",
+            type: "url",
+        },
+        {
             name: "goals",
             title: "Goals of LYF Camp",
             type: "array",
@@ -79,9 +84,14 @@ const schema: DocumentDefinition = {
             ]
         },
         {
-            name: "campVideoLink",
-            title: "Camp Video Link",
-            type: "url"
+            name: "quotes",
+            title: "Camp Testimonials",
+            type: "array",
+            of: [
+                {
+                    type: "quote",
+                }
+            ]
         },
         {
             name: "ctaHeader",
