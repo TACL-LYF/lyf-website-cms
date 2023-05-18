@@ -23,6 +23,17 @@ const schema: DocumentDefinition = {
             to: [{ type: "leadership" }],
             validation: (Rule) => Rule.required(),
         },
+        {
+            name: "upNext",
+            title: "Up Next Links",
+            type: "array",
+            of: [
+                {
+                    type: "reference",
+                    to: [{type: "pageLinks"}]
+                }
+            ]
+        },
     ],
 }
 
