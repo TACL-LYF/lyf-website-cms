@@ -39,11 +39,6 @@ const schema: DocumentDefinition = {
             type: "string",
         },
         {
-            name: "volunteerBody",
-            title: "Volunteer Section Body",
-            type: "portableText",
-        },
-        {
             name: "volunteerImpact",
             title: "Volunteer Impact",
             description: "Cards shown in the 'Why do we volunteer' section",
@@ -63,11 +58,6 @@ const schema: DocumentDefinition = {
             name: "getInvolvedSubHeader",
             title: "Get Involved Section SubHeader",
             type: "string",
-        },
-        {
-            name: "getInvolvedBody",
-            title: "Get Involved Section Body",
-            type: "portableText",
         },
         {
             name: "getInvolved",
