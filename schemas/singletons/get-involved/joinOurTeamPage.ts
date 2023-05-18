@@ -19,20 +19,23 @@ const schema: DocumentDefinition = {
         {
             name: "headerImage",
             title: "Header Image",
-            description:
-                "Image accompanying 'Join Our Team' section",
-            type: "image"
+            description: "Image accompanying 'Join Our Team' section",
+            type: "image",
         },
         {
             name: "headerButton",
             title: "Header button",
-            description:
-                "Button to 'Apply Now'",
-            type: "button"
+            description: "Button to 'Apply Now'",
+            type: "button",
         },
         {
             name: "volunteerHeader",
             title: "Volunteer Section Header",
+            type: "string",
+        },
+        {
+            name: "volunteerSubHeader",
+            title: "Volunteer Section SubHeader",
             type: "string",
         },
         {
@@ -43,8 +46,7 @@ const schema: DocumentDefinition = {
         {
             name: "volunteerImpact",
             title: "Volunteer Impact",
-            description:
-                "Cards shown in the 'Why do we volunteer' section",
+            description: "Cards shown in the 'Why do we volunteer' section",
             type: "array",
             of: [
                 {
@@ -55,6 +57,11 @@ const schema: DocumentDefinition = {
         {
             name: "getInvolvedHeader",
             title: "Get Involved Section Header",
+            type: "string",
+        },
+        {
+            name: "getInvolvedSubHeader",
+            title: "Get Involved Section SubHeader",
             type: "string",
         },
         {
@@ -77,26 +84,23 @@ const schema: DocumentDefinition = {
         {
             name: "interestForm",
             title: "Interest Form",
-            description:
-                "Text attached to interest form submission",
+            description: "Text attached to interest form submission",
             type: "text",
         },
         {
             name: "interestFormButton",
             title: "Interest Form Button",
-            description:
-                "Button to submit interest form",
+            description: "Button to submit interest form",
             type: "button",
         },
         {
             name: "upNext",
             title: "Up Next",
-            description:
-                "Cards shown in the 'Up Next' section",
+            description: "Cards shown in the 'Up Next' section",
             type: "array",
             of: [
                 {
-                    type: "card"
+                    type: "card",
                 },
             ],
         },
