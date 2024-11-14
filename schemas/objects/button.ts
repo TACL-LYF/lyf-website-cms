@@ -34,6 +34,13 @@ const schema: ObjectDefinition = {
             description: "Whether the button should be disabled and not click-able",
             type: "boolean",
             initialValue: false,
+        },
+        {
+            name: "hidden",
+            title: "Hide Button",
+            description: "Whether the button should be hidden altogether from the page",
+            type: "boolean",
+            initialValue: false,
         }
     ],
 }
