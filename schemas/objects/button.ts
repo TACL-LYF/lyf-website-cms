@@ -28,6 +28,13 @@ const schema: ObjectDefinition = {
             },
             validation: (Rule) => Rule.required(),
         },
+        {
+            name: "disabled",
+            title: "Disabled",
+            description: "Whether the button should be disabled and not click-able",
+            type: "boolean",
+            initialValue: false,
+        }
     ],
 }
 
