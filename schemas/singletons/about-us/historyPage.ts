@@ -32,7 +32,18 @@ const schema: DocumentDefinition = {
                     type: "card",
                 },
             ],
-        }
+        },
+        {
+            name: "upNext",
+            title: "Up Next Links",
+            type: "array",
+            of: [
+                {
+                    type: "reference",
+                    to: [{type: "pageLinks"}]
+                }
+            ]
+        },
     ],
 }
 
