@@ -17,6 +17,7 @@ const sitePages = [
         pages: [
             { title: "What is LYF Camp?", schema: "lyfCampPage" },
             { title: "FAQs", schema: "faqPage" },
+            { title: "Registration Policy", schema: "registrationPolicyPage" },
         ],
     },
     {
