@@ -18,6 +18,7 @@ const sitePages = [
             { title: "What is LYF Camp?", schema: "lyfCampPage" },
             { title: "FAQs", schema: "faqPage" },
             { title: "Registration Policy", schema: "registrationPolicyPage" },
+            { title: "Financial Aid Policy", schema: "financialAidPolicyPage" },
         ],
     },
     {

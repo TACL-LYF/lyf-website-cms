@@ -7,6 +7,7 @@ import leadershipPage from "./singletons/about-us/leadershipPage"
 import faqPage, { faqSection, question } from "./singletons/camp/faqPage"
 import lyfCampPage from "./singletons/camp/lyfCampPage"
 import registrationPolicyPage from "./singletons/camp/registrationPolicy"
+import financialAidPolicyPage from "./singletons/camp/financialAidPolicy"
 import cookbookPage from "./singletons/get-involved/cookbookPage"
 import joinOurTeamPage from "./singletons/get-involved/joinOurTeamPage"
 import donatePage from "./singletons/get-involved/donatePage"
@@ -42,6 +43,7 @@ export default [
     faqPage,
     lyfCampPage,
     registrationPolicyPage,
+    financialAidPolicyPage,
     // get-involved
     cookbookPage,
     joinOurTeamPage,
