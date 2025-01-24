@@ -42,7 +42,7 @@ export default (S: StructureBuilder) =>
                     .id("siteSettings")
                     .schemaType("siteSettings")
                     // Create a document with the ID siteSettings
-                    .documentId("siteSettings")
+                    .documentId("siteSettings"),
             ),
             S.divider(),
             S.listItem()
@@ -58,7 +58,7 @@ export default (S: StructureBuilder) =>
                                     S.editor()
                                         .id("homePage")
                                         .schemaType("homePage")
-                                        .documentId("homePage")
+                                        .documentId("homePage"),
                                 ),
                             // Show the site map as pages to be edited
                             ...sitePages.map(({ section, pages }) =>
@@ -78,18 +78,18 @@ export default (S: StructureBuilder) =>
                                                                 S.editor()
                                                                     .id(schema)
                                                                     .schemaType(
-                                                                        schema
+                                                                        schema,
                                                                     )
                                                                     .documentId(
-                                                                        schema
-                                                                    )
+                                                                        schema,
+                                                                    ),
                                                             )
-                                                    }
-                                                )
-                                            )
-                                    )
+                                                    },
+                                                ),
+                                            ),
+                                    ),
                             ),
-                        ])
+                        ]),
                 ),
             S.divider(),
             S.listItem()
@@ -108,10 +108,10 @@ export default (S: StructureBuilder) =>
                                 .filter(
                                     // Hmm this isn't working how I want it to right now. I think it has to do with the boardYear being different
                                     // but honestly I'm not sure.
-                                    "_type == 'person' && $campYear == campYear._ref"
+                                    "_type == 'person' && $campYear == campYear._ref",
                                 )
-                                .params({ campYear })
-                        )
+                                .params({ campYear }),
+                        ),
                 ),
             // The rest of the documents
             ...S.documentTypeListItems().filter(
@@ -122,8 +122,8 @@ export default (S: StructureBuilder) =>
                         "homePage",
                         // Filter out all of the schemas for the site pages
                         ...sitePages.flatMap(({ pages }) =>
-                            pages.map(({ schema }) => schema)
+                            pages.map(({ schema }) => schema),
                         ),
-                    ].includes(item.getId())
+                    ].includes(item.getId()),
             ),
         ])
