@@ -85,14 +85,14 @@ const schema: DocumentDefinition = {
         },
         {
             name: "upNext",
-            title: "Up Next",
-            description: "Cards shown in the 'Up Next' section",
+            title: "Up Next Links",
             type: "array",
             of: [
                 {
-                    type: "card",
-                },
-            ],
+                    type: "reference",
+                    to: [{type: "pageLinks"}]
+                }
+            ]
         },
     ],
 }

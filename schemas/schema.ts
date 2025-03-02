@@ -18,6 +18,7 @@ import campYear from "./documents/campYear"
 import leadership from "./documents/leadership"
 import product from "./documents/product"
 import event from "./documents/event"
+import pageLinks from "./documents/pageLinks"
 
 // Import the object schemas
 import button from "./objects/button"
@@ -55,6 +56,7 @@ export default [
     event,
     leadership,
     product,
+    pageLinks,
 
     // Objects
     button,
