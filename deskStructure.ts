@@ -28,6 +28,7 @@ const sitePages = [
             { title: "Donate", schema: "donatePage" },
             { title: "Cookbook", schema: "cookbookPage" },
             { title: "Get Involved", schema: "getInvolvedPage" },
+            { title: "Art Contest", schema: "artContestPage" },
         ],
     },
 ]
