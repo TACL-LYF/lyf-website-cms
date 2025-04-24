@@ -12,6 +12,7 @@ import cookbookPage from "./singletons/get-involved/cookbookPage"
 import joinOurTeamPage from "./singletons/get-involved/joinOurTeamPage"
 import donatePage from "./singletons/get-involved/donatePage"
 import getInvolvedPage from "./singletons/get-involved/getInvolvedPage"
+import artContestPage from "./singletons/get-involved/artContestPage"
 
 // Import the document schemas
 import campYear from "./documents/campYear"
@@ -49,6 +50,7 @@ export default [
     joinOurTeamPage,
     donatePage,
     getInvolvedPage,
+    artContestPage,
 
     // Documents
     campYear,
